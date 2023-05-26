@@ -1,0 +1,180 @@
+.parallax::-webkit-scrollbar {
+  display: none;
+}
+
+.parallax {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  height: 100%;
+}
+
+.parallax-image-layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline {
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.showcase-container {
+  position: relative;
+  height: calc(100vh - 108px);
+}
+
+.details-container {
+  position: relative;
+  height: calc(100vh - 108px);
+  background-color: #000000;
+}
+
+.animation-container {
+  position: absolute;
+  width: 100%;
+}
+
+.page-wrapper {
+  position: relative;
+  overflow-x: clip;
+}
+
+.image-tile {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+}
+
+.shopkeep-image {
+  width: 200px !important;
+  height: 400px !important;
+  background-color: #00b4d8;
+
+  &.tile-1 {
+    z-index: 3;
+    top: calc(180px) !important;
+    left: calc(50% + 15px) !important;
+  }
+
+  &.tile-2 {
+    z-index: 4;
+    top: calc(180px + 131px) !important;
+    left: calc(50% + 162px) !important;
+  }
+
+  &.tile-3 {
+    z-index: 5;
+    top: calc(180px + 262px) !important;
+    left: calc(50% + 309px) !important;
+  }
+}
+
+.fruit-stand-image {
+  width: 250px !important;
+  height: 350px !important;
+  background-color: #00b000;
+  position: absolute;
+
+  &.tile-1 {
+    z-index: 4;
+    transform: translateY(50%);
+  }
+
+  &.tile-2 {
+    z-index: 3;
+    transform: translateY(50%);
+  }
+}
+
+.card {
+  background-color: #00b4d8;
+  width: 1100px !important;
+  height: 340px !important;
+  top: calc(50% - 170px) !important;
+  left: calc(50% - 550px) !important;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+
+  .heading {
+    color: map-get($colors, 'heading-dark');
+    font-size: $card-heading;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .link {
+    color: map-get($colors, 'heading-dark');
+    font-size: $card-link;
+    font-weight: 500;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .subhead {
+    color: #ffffff;
+    font-size: $card-subhead;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &.right {
+    text-align: left;
+  }
+
+  &.dark {
+    background-color: map-get($colors, 'dark-blue');
+
+    .heading,
+    .link {
+      color: map-get($colors, 'blue');
+    }
+
+    .subhead {
+      color: map-get($colors, 'white');
+    }
+  }
+
+  &.light {
+    background-color: map-get($colors, 'light-blue');
+
+    .heading,
+    .link {
+      color: map-get($colors, 'dark-blue');
+    }
+
+    .subhead {
+      color: map-get($colors, 'black');
+    }
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .content-container {
+    display: grid;
+    row-gap: 24px;
+
+    &.left {
+      transform: translateX(-150px);
+      .heading,
+      .subhead,
+      .link {
+        text-align: right;
+      }
+    }
+
+    &.right {
+      transform: translateX(150px);
+      .heading,
+      .subhead,
+      .link {
+        text-align: left;
+      }
+    }
+  }
+}

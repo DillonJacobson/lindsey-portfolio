@@ -1,0 +1,12 @@
+@function rem($pixels) {
+  @if $pixels == 1 {
+    @return $pixels;
+  } @else {
+    $rem: calc($pixels / 16px);
+    @return #{$rem}rem;
+  }
+}
+
+$card-heading: rem(48px);
+$card-subhead: rem(36px);
+$card-link: rem(20px);

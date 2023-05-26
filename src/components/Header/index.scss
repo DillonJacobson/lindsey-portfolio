@@ -1,0 +1,44 @@
+.nav {
+  background-color: map-get($colors, 'blue');
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo-wrapper {
+  width: 218px;
+  height: 67px;
+  position: relative;
+}
+
+.nav-links {
+  width: 50%;
+  height: $nav-height;
+  margin: 0 0 0 auto;
+  display: grid;
+  gap: rem(40px);
+}
+
+.nav-link {
+  grid-row: 1;
+  grid-column: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  a:hover {
+    color: blueviolet;
+  }
+}
